@@ -1,8 +1,41 @@
+<!DOCTYPE html>
 <html>
   <head>
+  	<meta charset="UTF-8">
+  	<title>Login and Registration</title>
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
   </head>
   <body>
-    The best place to start is the "WelcomeController.py" file in app/controllers.
+    <div id="wrapper">
+    	<h2>*Registration</h2>
+    	<form action="/users" method="POST">
+			<label>First Name: </label>
+			<input type="text" name="first_name"><br>
+			<label>Last Name: </label>
+			<input type="text" name="last_name"><br>
+			<label>Email: </label>
+			<input type="text" name="email"><br>
+			<label>Password: </label>
+			<input type="password" name="password"><br>
+			<label>Confirm Password: </label>
+			<input type="password" name="confirm_pw"><br>
+			<input type="submit" name="submit" value="Register" id="submit">	
+		</form><br>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{message}}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		<h2>*Login</h2>
+		<form action="/login" method="POST">
+			<label>Email: </label>
+			<input type="text" name="email"><br>
+			<label>Password: </label>
+			<input type="password" name="password"><br>
+			<input type="submit" name="submit" value="Login" id="submit">	
+		</form>
+    </div>
   </body>
 </html>

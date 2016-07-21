@@ -1,3 +1,31 @@
 * {
   font-family: monaco;
 }
+
+#wrapper {
+	width: 350px;
+	height: 600px;
+	margin: 50px;
+}
+
+input, label {
+	margin-top: 5px;
+}
+
+input {
+	border: 2px solid black;
+}
+
+#submit {
+	background-color: skyblue;
+	color: white;
+	border: none;
+	box-shadow: 5px 5px 3px #888888;
+	width: 90px;
+	height: 30px;
+	font-size: 14px;
+}
+
+p {
+	color: red;
+}

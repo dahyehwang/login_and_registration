@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Login and Registration</title>
+		<link rel="stylesheet" href="/static/css/styles2.css" type="text/css">
+	</head>
+	<body>
+		<div id="wrapper">	
+		   	<h2>Success! Welcome, {{ session['first_name'] }}!</h2>
+		  	<h5>Successfully registered (or logged in)!</h5>
+		    <form action="/success" method="GET">
+		   		<a href="/">Go Back</a>
+		    </form>
+	    </div>
+	</body>
+</html>
